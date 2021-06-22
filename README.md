@@ -59,7 +59,19 @@
  2. Filter the dataset for total_votes being greater than or equal to 20.
  
  ![](pic/Vine_Review_Analysis1.png)
- 3.  
+ 
+ 3. Find the number of Vine reviews and non-Vine reviews 
+ 
+ ![](pic/Vine_Review_Analysis2png)
+ 
+ 4. Find the number of 5 stars review by Vine and non-Vine.
+ 
+ ![](pic/Vine_Review_Analysis3.png)
+  
+ 5 Calculate the percentage of Vine and non-Vine reviews that were 5 stars.
+ 
+ ![](pic/Vine_Review_Analysis4.png)
+
  
 ## Results: Using bulleted lists and images of DataFrames as support, address the following questions:
 
