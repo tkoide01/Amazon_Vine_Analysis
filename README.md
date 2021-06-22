@@ -4,7 +4,7 @@
   Utilize the datasets and use PySpark to perform the ETL process to extract the dataset, transform the data, connect to an AWS RDS instance, and load the transformed data into pgAdmin. Then, use PySpark to determine if there is any bias toward favorable reviews from Vine members in your dataset.
   
 ### Purpose:   
-   The purpose of this analysis to see if the chosen data set has any biad toward favorable reviews from Amazon Vine members 
+   The purpose of this analysis to see if the dataset shows any bias toward favorable reviews from Amazon Vine members. In order to determine the bias, we proceed two technical analysis as follows:
    
   Two technical analysis deliverables
   - Perform ETL on Amazon Product Reviews
@@ -43,3 +43,39 @@
   6. Connect to the AWS RDS instance and write each DataFrame to its table
   
   ![write_to_rds](pic/write_to_rds.png)
+  
+  7. Confrim that the dataframes are properly imported to the tables in pgAdmin database.
+
+ ![](pic/rds1.png)
+ 
+ ![](pic/rds2.png)
+  
+ ![](pic/rds3.png)
+   
+ ![](pic/rds4.png)
+ 
+ - Determine the bias of Vine reviews
+ 1. Set up the PySpark session and load dataset from S3 on Google Colab notebook.
+ 2. Filter the dataset for total_votes being greater than or equal to 20.
+ 
+ ![](pic/Vine_Review_Analysis1.png)
+ 3.  
+ 
+## Results: Using bulleted lists and images of DataFrames as support, address the following questions:
+
+- How many Vine reviews and non-Vine reviews were there?
+
+![](pic/Vine_Review_Analysis_review_vine.png)
+![](pic/Vine_Review_Analysis_review_non-vine.png)
+- How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?
+
+![](pic/Vine_Review_Analysis_5star_review_vine.png)
+![](pic/Vine_Review_Analysis_5star_review_non-vine.png)
+- What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
+
+![](pic/Vine_Review_Analysis_ratio_5star_review_vine.png)
+
+![](pic/Vine_Review_Analysis_ratio_5star_review_non-vine.png)
+
+
+## Summary: In your summary, state if there is any positivity bias for reviews in the Vine program. Use the results of your analysis to support your statement. Then, provide one additional analysis that you could do with the dataset to support your statement.
