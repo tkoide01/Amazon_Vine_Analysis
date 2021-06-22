@@ -19,7 +19,17 @@
 
  - Perform ETL on Amazon Product Reviews
   1. From Amazon Review datasets, we chose `<https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Mobile_Apps_v1_00.tsv.gz>` 
-  2. Create a new database with Amazon RDS. We name the server "kuma1210-bucket."
+  2. Create a new database with Amazon RDS. We name the server "kuma1210-project."
   3. In pgAdmin, create a new database in Amazon RDS server. We name the new database "amazon_vine_analysis."
   4. Run the `challenge_schema.sql` query in pgAdmin to create the tables for new database. Confirm that we have four tables: `customers_table`, `products_table`, `review_id_table`, and `vine_table`.
-  5. Run `Amazon_Reviews_ETL` file on a Google Colab Notebook to extract the dataset
+  5. Run `Amazon_Reviews_ETL` file on a Google Colab Notebook to extract the dataset into each DataFrame
+  - `customers_table`
+  ![customers_df]()
+  - `products_table`
+  ![products_df]()
+  - `review_id_table`
+  ![review_id_df]()
+  - `vine_table`
+  ![vine_df]()
+  6. Connect to the AWS RDS instance and write each DataFrame to its table
+  ![write_to_rds]()
