@@ -62,7 +62,7 @@
  
  3. Find the number of Vine reviews and non-Vine reviews 
  
- ![](pic/Vine_Review_Analysis2png)
+ ![](pic/Vine_Review_Analysis2.png)
  
  4. Find the number of 5 stars review by Vine and non-Vine.
  
@@ -73,21 +73,25 @@
  ![](pic/Vine_Review_Analysis4.png)
 
  
-## Results: Using bulleted lists and images of DataFrames as support, address the following questions:
-
+## Results
 - How many Vine reviews and non-Vine reviews were there?
 
-![](pic/Vine_Review_Analysis_review_vine.png)
-![](pic/Vine_Review_Analysis_review_non-vine.png)
+![](pic/Vine_Review_Analysis_review_count.png)
+Based on the output from PySpark, we actually find out that Vine review is 0 and non-Vine review is 129,516. In fact the `filtered_table.count()` is also 129,516 and proves that all reviews were done by non-Vine.
+
 - How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?
 
-![](pic/Vine_Review_Analysis_5star_review_vine.png)
-![](pic/Vine_Review_Analysis_5star_review_non-vine.png)
+The PySpark shows that non-Vine reviews were 59,278.
+
 - What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
 
-![](pic/Vine_Review_Analysis_ratio_5star_review_vine.png)
-
-![](pic/Vine_Review_Analysis_ratio_5star_review_non-vine.png)
+The percentage of non-Vine review that were 5 stars is 0.458%.
 
 
-## Summary: In your summary, state if there is any positivity bias for reviews in the Vine program. Use the results of your analysis to support your statement. Then, provide one additional analysis that you could do with the dataset to support your statement.
+## Summary
+  Unfortunately, this dataset is not possible to measure bias on positive reviews by paid-members because there was 0 review done by Vine. Therefore, we could not compare the percentage of 5 stars Vine review and 5 stars non-Vine reviews. 
+  Below are ideas of we additional analysis we can do to determine whether we implement paid review for this markets.
+  1. Given the 5 stars review by non-Vine is 0.458%, we should analyse other dataset and compare the percentage of non-Vine reviews that are 5 stars. If the current dataset's percentage is not significantly lower compared to the percentage of other datasets, we would not need to hire paid reviewers to increase the 5 star reviews.
+  2. If we see the current dataset's percentage is significantly lower, we should assess if other dataset is experiencing the positive bias for having paid reviews. Then consider implementing paid reviewer for this market as well. 
+
+
