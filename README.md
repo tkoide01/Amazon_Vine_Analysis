@@ -23,13 +23,23 @@
   3. In pgAdmin, create a new database in Amazon RDS server. We name the new database "amazon_vine_analysis."
   4. Run the `challenge_schema.sql` query in pgAdmin to create the tables for new database. Confirm that we have four tables: `customers_table`, `products_table`, `review_id_table`, and `vine_table`.
   5. Run `Amazon_Reviews_ETL` file on a Google Colab Notebook to extract the dataset into each DataFrame
+  - Load the dataset into dataframe to transform
+
+  ![](pic/load_dataframe.png)
+  
   - `customers_table`
-  ![customers_df]()
+  
+  ![customers_df](pic/customers_dataframe.png)
   - `products_table`
-  ![products_df]()
+  
+  ![products_df](pic/products_dataframe.png)
   - `review_id_table`
-  ![review_id_df]()
+  
+  ![review_id_df](pic/review_id_df_dataframe.png)
   - `vine_table`
-  ![vine_df]()
+  
+  ![vine_df](pic/vine_dataframe.png)
+  
   6. Connect to the AWS RDS instance and write each DataFrame to its table
-  ![write_to_rds]()
+  
+  ![write_to_rds](pic/write_to_rds.png)
